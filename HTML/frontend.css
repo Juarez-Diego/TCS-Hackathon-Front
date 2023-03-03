@@ -19,9 +19,9 @@ h3 {
     font-size: 1.8rem;
 }
 
-h1,h2,h3 {
+/* h1,h2,h3 {
     text-align: center;
-}
+} */
 
 a {
     text-decoration: none;
@@ -70,17 +70,19 @@ a:hover{
     justify-content: space-evenly;
     background-color: var(--gray);
     color: var(--white);
-    height: 200px;
+    height: auto;
     font-family: 'Krub', sans-serif;
     margin-bottom: 20px;
     margin-top: 20px;
     box-shadow: -1px -1px 25px -8px rgba(0,0,0,0.58);
     border-radius: 12px;
+    overflow: hidden;
 }
 
 .about-container{
     display: flex;
     flex-direction: column;
+    overflow: auto;
     /* border: 1.8px solid black; */
 }
 

@@ -171,6 +171,15 @@ a:hover{
     margin-left: 80px;
 }
 
+.contact-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* border: 1.5px solid var(--gray); */
+    width: 700px;
+}
+
 
 .column {
     font-family: 'Krub', sans-serif;

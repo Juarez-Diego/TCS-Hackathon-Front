@@ -76,7 +76,7 @@ a:hover{
     margin-bottom: 20px;
     margin-top: 20px;
     box-shadow: -1px -1px 25px -8px rgba(0,0,0,0.58);
-    border-radius: 12px;
+    /* border-radius: 12px; */
     overflow: hidden;
 }
 
@@ -121,10 +121,11 @@ a:hover{
 
 
 .grid-container{
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     grid-column-gap: 15px;
-    grid-row-gap:25px;
+    grid-row-gap:25px; */
+    width: 100%;
     /* border: 1.8px solid black; */
 }
 
@@ -167,4 +168,111 @@ a:hover{
 
 .footer-info{
     margin-left: 80px;
+}
+
+
+.column {
+    font-family: 'Krub', sans-serif;
+    float: left;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--dark);
+    background-color: var(--primary);
+    /* border-radius: 12px; */
+    /* border: 1.5px solid var(--gray); */
+  }
+
+  .column:hover{
+    border-bottom: 1.8px solid var(--dark);
+  }
+
+  .tab {
+    padding: 20px;
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .row:after {
+    overflow: hidden;
+    display: table;
+    clear: both;
+  }
+
+  .closeButton {
+    float: right;
+    color: var(--dark);
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+.list-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* border: 1.8px solid black; */
+}
+
+.list-menu{
+    font-family: 'Krub', sans-serif;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--less-gray);
+    /* border: 1.8px solid black; */
+    padding: 0px;
+}
+
+.list-menu li{
+    list-style: none;
+    background: var(--white);
+    cursor: pointer;
+}
+
+.list-menu li label{
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--primary);
+    border: 1.8px solid var(--less-gray)
+}
+
+.list-menu li label:hover{
+    color: var(--white)
+}
+
+.list-menu label + input[type="radio"]{
+    display: none;
+}
+
+.list-menu label + input[type="radio"]:checked + .content{
+    max-height: 400px;
+}
+
+/* .list-menu li label{
+    background-color: var(--less-gray);
+} */
+
+.list-menu li label span{
+    display: inline-block;
+    font-size: 22px;
+    transform: rotate(90deg);
+    margin-right: 40px;
+}
+
+.content{
+    overflow: hidden;
+    transition: max-height 0.5s;
+    max-height: 0;
 }

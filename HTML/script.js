@@ -144,7 +144,7 @@ if(typeof(mpld3) !== "undefined" && mpld3._mpld3IsLoaded){
 
 
 
-fetch("../Data/last_signals.json")
+fetch("last_signals.json")
         .then(res => res.json())
         .then(data => {
             let keys = Object.keys(data)

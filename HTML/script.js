@@ -34,7 +34,6 @@ function mpld3_load_lib(url, callback){
   }
     
 
-
   if(typeof(mpld3) !== "undefined" && mpld3._mpld3IsLoaded){
     // already loaded: just create the figure
     !function(mpld3){
@@ -113,11 +112,58 @@ if(typeof(mpld3) !== "undefined" && mpld3._mpld3IsLoaded){
          });
 }
 
-        function openContent(content) {
-            var i, x
-            x = document.getElementsByClassName('tab')
-            for (i = 0; i < x.length; i++) {
-              x[i].style.display = 'none'
+// const firstGraph = document.querySelector('#expd1')
+// console.log(firstGraph)
+// fetch("../Data/app_web_fridges.html")
+//     .then(res => res.text())
+//     .then(data => {firstGraph.innerHTML = data})
+
+
+// function loadHtml(id, filename){
+
+//     console.log(id, filename)
+    
+//     let xhttp;
+//     let element = document.getElementById(id);
+//     let file = filename
+  
+//     if(file){
+//       xhttp = new XMLHttpRequest();
+//       xhttp.onreadystatechange = function(){
+//         if(this.readyState == 4) {
+//           if(this.status == 200) {element.innerHTML = this.responseText }
+//           if(this.status == 404) {element.innerHTML = "Page not found"}
+//         }
+//       }
+  
+//      xhttp.open("GET", `../Data/${file}`, true)
+//      xhttp.send()
+//      return
+//     }
+//   }
+
+
+
+fetch("../Data/last_signals.json")
+        .then(res => res.json())
+        .then(data => {
+            let keys = Object.keys(data)
+            for(let i = 0; i < keys.length; i++){
+                document.getElementById(keys[i]).innerHTML = data[keys[i]].toFixed(2)
             }
-            document.getElementById(content).style.display = 'block'
-          }
+        })
+
+
+  function openContent(id) {
+    var x = document.getElementsByClassName('tab')
+    for (let i = 0; i < x.length; i++) {
+      x[i].style.display = 'none'
+    }
+    document.getElementById(id).style.display = 'block'
+  }
+
+
+
+      
+
+          
